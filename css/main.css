@@ -1,0 +1,71 @@
+.drag-and-drop {
+    cursor: move;
+    position: absolute;
+    z-index: 1000;/*数が大きいほうが手前に来る*/
+}
+.drag {
+    z-index: 1001;
+}
+
+#mark1{
+    top: 100;
+    left: 0;
+}
+#mark2{
+    top: 100;
+    left: 110px;
+}
+#mark3{
+    top: 100;
+    left: 220px;
+}
+#mark4{
+    top: 100;
+    left: 330px;
+}
+#mark5{
+    top: 100;
+    left: 440px;
+}
+
+/*ハートカウンタ*/
+header {
+    position: fixed;
+    top: 0;
+    left:0;
+    background-color: white;
+}
+.counter{
+    display: inline-block;
+}
+
+/*中身を非表示にしておく*/
+.box .odai {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+/*クリックで中身表示*/
+.box input:checked ~ .odai {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+/*答えを隠す*/
+.box label {
+    margin: 1.5rem 10%;
+    padding: 15px;
+    font-weight: bold;
+    border: solid 2px black;
+    cursor :pointer;
+}
+/*ボタンホバー時*/
+.box label:hover {
+    background: #efefef;
+}
+/*チェックは見えなくする*/
+.box input {
+    display: none;
+}
