@@ -17,7 +17,14 @@
         </div>
     </header>
     <h1>かたろーぐ</h1>
-    <p>ルール説明</p>
+    <div class="introduction">
+        <p>「かたろーぐとは」</p>
+        <p>『かたろーぐ』は、１人が出題者となり、他の人は出題者が決めたアイテムから<br>
+            どのようなランキング付けを行ったかを予測していくパーティゲームです。<br>
+            全員で質問をしながら、順位を予想し、ごほうびのハートコマを集めましょう。<br>
+            それをサイトで再現してみました。</p>
+    </div>        
+    <from><input type="button" value="ルール説明" onclick="explain()"></from>
     <div class="box">
         <label for="label1">都道府県</label>
         <input type="checkbox" id="label1"/>
@@ -129,4 +136,8 @@ $(function (){
         $("#heartCount").val(count + 1) ;
     });
 });
+
+function explain(){
+    window.open("./explain.html",null,"width=600,height=450");
+}
 </script>
